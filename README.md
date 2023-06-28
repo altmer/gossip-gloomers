@@ -85,10 +85,10 @@ There is another RPC call I added in order to gossip messages between nodes:
 I implemented a simple [solution](https://github.com/anmarchenko/gossip-gloomers/blob/be07dd76ed4205c30667b27c08bc8ed546f030a9/maelstrom-broadcast/main.go) for this challenge: the messages are being propagated to every node in a cluster once a node receives a new message:
 
 ```mermaid
-graph TB:
-  A(0)-->B(1)
-  A(0)-->C(2)
-  A(0)-->N(N)
+graph TB;
+  A(0)-->B(1);
+  A(0)-->C(2);
+  A(0)-->N(N);
 ```
 
 This is not an optimized solution but it solves the problem in this case.
