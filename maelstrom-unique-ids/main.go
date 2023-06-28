@@ -9,8 +9,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/google/uuid"
-
 	maelstrom "github.com/jepsen-io/maelstrom/demo/go"
 )
 
@@ -61,11 +59,6 @@ func (snowflake *Snowflake) GenerateUID() uint64 {
 		snowflake.Sequence
 
 	return uint64(id)
-}
-
-func generateUUID() string {
-	id := uuid.New()
-	return id.String()
 }
 
 func getMilliSeconds() int64 {
